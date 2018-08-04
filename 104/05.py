@@ -11,10 +11,11 @@ class university(object):
 
 # a = university('aaaa', ['1','2'])
 # print(a.name)
+
 unis = []
 n = int(input())
-ans = []
 unis_names = []
+ans = []
 
 for i in range(n):
 	inp = input()
@@ -38,11 +39,11 @@ for i in range(m):
 		 	 	ans.append(j.name)
 	ans.append('\n')
 
-# print(unis_names)
-# print(ans)
-
+final_ans = []
 for i in ans:
 	if i != '\n':
-		print(i, end=" ")
+		final_ans.append(i)
 	else:
-		print(i, end="")
+		final_ans = sorted(final_ans)
+		print(*final_ans)
+		final_ans = []
