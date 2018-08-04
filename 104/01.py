@@ -40,42 +40,20 @@ while 1:
 		steps = input()
 
 		if steps == 'v':
-			# print('%s:%d' % (inp.upper(), customerA.balance if inp == 'a' else customerB.balance))
 			answer.append('%s:%d' % (inp.upper(), customerA.balance if inp == 'a' else customerB.balance))
 		if steps == 's':
 			numbers = int(input())
 			customerA.deposit(numbers) if inp == 'a' else customerB.deposit(numbers)
-			# if inp == 'a':
-			# 	customerA.deposit(numbers)
-			# else:
-			# 	customerB.deposit(numbers)
-			# print('%s:Deposit,%d' % (inp.upper(), numbers))
 			answer.append('%s:Deposit,%d' % (inp.upper(), customerA.balance if inp == 'a' else customerB.balance))
-
 		if steps == 'w':
 			numbers = int(input())
 			customerA.withdraw(numbers) if inp == 'a' else customerB.withdraw(numbers)
-			# if inp == 'a':
-			# 	customerA.withdraw(numbers)
-			# else:
-			# 	customerB.withdraw(numbers)
-			# print('%s:Withdraw,%d' % (inp.upper(), numbers))
 			answer.append('%s:Withdraw,%d' % (inp.upper(), customerA.balance if inp == 'a' else customerB.balance))
-
 		if steps == 'p':
-			# print(showPersentage(customerA.balance, customerB.balance))
 			answer.append(showPersentage(customerA.balance, customerB.balance))
-
 		if steps == 'a' or steps == 'b' or steps == 'e':
 			inp = steps
 			break
 
 for i in answer:
 	print(i)
-
-# print(repr(customer1))
-# customer1.deposit(100)
-# customer1.withdraw(30)
-# print(customer1.balance)
-# customer2 = bankAccount('Sam', 200)
-# print(showPersentage(customer1.balance, customer2.balance))
